@@ -53,9 +53,9 @@ const StoryCard = ({
   return (
     <>
       { loading
-        ? (<StoryCardContainer data-testid="story-card">
-            <SkeletonLine/>
-            <SkeletonLine/>
+        ? (<StoryCardContainer data-testid="story-card-loading">
+            <SkeletonLine />
+            <SkeletonLine />
           </StoryCardContainer>)
         : (<StoryCardLink data-testid="story-link" href={cardData?.url ?? `${BASE_URL}${id}`} target="_blank">
             <StoryCardContainer key={cardData?.id} data-testid="story-card">

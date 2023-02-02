@@ -7,7 +7,7 @@ const ErrorComponent = ({ message = 'Error: Something Went Wrong' }: ErrorCompon
     window.location.reload();
   }
 
-  return (<ErrorContainer>
+  return (<ErrorContainer data-testid="error-container">
     <ErrorText data-testid="error-message">{message}</ErrorText>
     <ReloadButton data-testid="error-reload-button" onClick={handleReload}>Reload</ReloadButton>
   </ErrorContainer>)

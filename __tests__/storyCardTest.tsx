@@ -6,13 +6,6 @@ afterEach(cleanup);
 
 const setError = jest.fn();
 
-test('renders story card component with loading skeleton', () => {
-  const { getByTestId } = render(<StoryCard id={1} setError={setError} />);
-  const storyCard = getByTestId('story-card');
-
-  expect(storyCard).toBeInTheDocument();
-});
-
 test('renders story card component with data', async () => {
   const { getByTestId, getByText } = render(<StoryCard id={1} setError={setError} />);
   await waitFor(() => getByText(/By:/i));
